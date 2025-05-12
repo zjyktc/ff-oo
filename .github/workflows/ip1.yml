@@ -22,27 +22,8 @@ jobs:
 
       - name: Run ip1.py
         run: python ${{ github.workspace }}/ip1.py
-
-
-
-      - name: 提交更改
-        run: |
-          git config --local user.email "zjykyfy@qq.com"
-          git config --local user.name "zjykyfy"
-          git add .
-          git commit *.txt -m "Add generated file"
-          #git pull --rebase
-          git push -f
-
-
-
-      
-
-      - name: Install dependencies
-        run: pip install selenium requests futures eventlet
-
       - name: Run ip.py
-        run: python ${{ github.workspace }}/ip.py
+        run: python ${{ github.workspace }}/ip.py        
 
 
 
