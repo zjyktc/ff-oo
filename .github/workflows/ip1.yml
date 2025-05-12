@@ -34,24 +34,9 @@ jobs:
           #git pull --rebase
           git push -f
 
-name: ip2
 
-on:
-  schedule:
-    - cron: '*/20 * * * *'
 
-jobs:
-  build:
-    runs-on: ubuntu-24.04
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-    
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
+      
 
       - name: Install dependencies
         run: pip install selenium requests futures eventlet
